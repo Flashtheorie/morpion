@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div align="center">
+<h1>JEU DE MORPION</h1>
+
+
+
+<h1>
+    <table>
+        <tr>
+            <th id = "1"></th>
+            <th id = "2"></th>
+            <th id = "3"></th>
+        </tr>
+        <tr>
+            <th  id = "4"></th>
+            <th  id = "5"></th>
+            <th  id = "6"></th>
+        </tr>
+        <tr>
+            <th  id = "7"></th>
+            <th  id = "8"></th>
+            <th  id = "9"></th>
+        </tr>
+    </table>
+
+
+ <div id="score"></div> 
+</h1>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    let score = 0;
+    let robotscore = 0;
+    $("#score").html(score + '/' + robotscore);
+    $("#1").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#2").html() == 'X' && $("#3").html() == 'X' || $("#4").html() == 'X' && $("#7").html() == 'X' || $("#5").html() == 'X' && $("#9").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+
+
+        if ($("#2").html() == 'O' && $("#3").html() == 'O' || $("#4").html() == 'O' && $("#7").html() == 'O' || $("#5").html() == 'O' && $("#9").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score  + '/' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+
+    })
+     $("#2").click(function(){
+        $(this).html('X').addClass('text-success')
+       if($("#1").html() == 'X' && $("#3").html() == 'X' || $("#5").html() == 'X' && $("#8").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        if ($("#1").html() == 'O' && $("#3").html() == 'O' || $("#5").html() == 'O' && $("#8").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        
+    })
+    $("#3").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#1").html() == 'X' && $("#2").html() == 'X'   || $("#5").html() == 'X' && $("#7").html() == 'X' || $("#6").html() == 'X' && $("#9").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        if ($("#1").html() == 'O' && $("#2").html() == 'O' || $("#5").html() == 'O' && $("#7").html() == 'O' || $("#6").html() == 'O' && $("#9").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#4").click(function(){
+        $(this).html('X').addClass('text-success')
+       if($("#5").html() == 'X' && $("#6").html() == 'X' || $("#1").html() == 'X' && $("#7").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        if ($("#5").html() == 'O' && $("#6").html() == 'O' || $("#1").html() == 'O' && $("#7").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#5").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#4").html() == 'X' && $("#6").html() == 'X' || $("#2").html() == 'X' && $("#8").html() == 'X' || $("#1").html() == 'X' && $("#9").html() == 'X' || $("#3").html() == 'X' && $("#7").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        if ($("#4").html() == 'O' && $("#6").html() == 'O' || $("#2").html() == 'O' && $("#8").html() == 'O' || $("#1").html() == 'O' && $("#9").html() == 'O' || $("#3").html() == 'O' && $("#7").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#6").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#4").html() == 'X' && $("#5").html() == 'X' || $("#3").html() == 'X' && $("#9").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        if ($("#4").html() == 'O' && $("#5").html() == 'O' || $("#3").html() == 'O' && $("#9").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#7").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#8").html() == 'X' && $("#9").html() == 'X' || $("#1").html() == 'X' && $("#4").html() == 'X' || $("#3").html() == 'X' && $("#5").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        if ($("#8").html() == 'O' && $("#9").html() == 'O' || $("#1").html() == 'O' && $("#4").html() == 'O' || $("#3").html() == 'O' && $("#5").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#8").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#7").html() == 'X' && $("#9").html() == 'X' || $("#2").html() == 'X' && $("#5").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        if ($("#7").html() == 'O' && $("#9").html() == 'O' || $("#2").html() == 'O' && $("#5").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+    $("#9").click(function(){
+        $(this).html('X').addClass('text-success')
+        if($("#7").html() == 'X' && $("#8").html() == 'X' || $("#3").html() == 'X' && $("#6").html() == 'X' || $("#1").html() == 'X' && $("#5").html() == 'X'){
+            alert('Vous avez gagné')
+            score = score + 1;
+            $("#score").html(score)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+        if ($("#7").html() != 'X')
+        {
+            $("#7").html('O').addClass('text-danger')
+        }
+        else if ($("#8").html() != 'X')
+        {
+            $("#8").html('O').addClass('text-danger')
+        }
+        else if ($("#3").html() != 'X')
+        {
+            $("#3").html('O').addClass('text-danger')
+        }
+        else if ($("#6").html() != 'X')
+        {
+            $("#6").html('O').addClass('text-danger')
+        }
+        else if ($("#1").html() != 'X')
+        {
+            $("#1").html('O').addClass('text-danger')
+        }
+        else if ($("#5").html() != 'X')
+        {
+            $("#5").html('O').addClass('text-danger')
+        }
+        else if ($("#2").html() != 'X')
+        {
+            $("#2").html('O').addClass('text-danger')
+        }
+        else if ($("#4").html() != 'X')
+        {
+            $("#4").html('O').addClass('text-danger')
+        }
+        else if ($("#9").html() != 'X')
+        {
+            $("#9").html('O').addClass('text-danger')
+        }
+        if ($("#7").html() == 'O' && $("#8").html() == 'O' || $("#3").html() == 'O' && $("#6").html() == 'O' || $("#1").html() == 'O' && $("#5").html() == 'O'){
+            alert('Le robot a gagné')
+            robotscore = robotscore + 1;
+            $("#score").html(score + '/ ' + robotscore)
+            $("#1").html('').removeClass('text-danger').removeClass('text-success')
+            $("#2").html('').removeClass('text-danger').removeClass('text-success')
+            $("#3").html('').removeClass('text-danger').removeClass('text-success')
+            $("#4").html('').removeClass('text-danger').removeClass('text-success')
+            $("#5").html('').removeClass('text-danger').removeClass('text-success')
+            $("#6").html('').removeClass('text-danger').removeClass('text-success')
+            $("#7").html('').removeClass('text-danger').removeClass('text-success')
+            $("#8").html('').removeClass('text-danger').removeClass('text-success')
+            $("#9").html('').removeClass('text-danger').removeClass('text-success')
+        }
+    })
+</script>
+</body>
+</html>
